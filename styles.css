@@ -1,0 +1,70 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.main-heading{
+width: 100%;
+background-color: black;
+margin: 0;
+padding: 0;
+height: 10rem;
+}
+.main-heading-overflow{
+position: fixed;
+color: white;
+font-size: 7rem;
+padding: 2rem;
+font-family: cursive;
+background-color: black;
+margin: 0;
+width: 100%;
+/* z-index: -1; */
+}
+button{
+    min-width: 10rem;
+    padding: .5rem;
+    color: white;
+    font-weight: bold;
+    background-color: brown;
+    border-radius: .4rem;
+    border: 2px solid brown;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.suit-card {
+    width: 48%;
+    margin: 1%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.suit-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.suit-price {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.finsln {
+    font-size: 5rem;
+    font-family: 'Parisienne', cursive;
+    /* Adjust font size as needed */
+    color: white;
+    /* margin-left: 2rem; */
+}

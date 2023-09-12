@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow flex items to wrap when screen size is reduced */
+}
+
+.suit-image-container {
+    flex: 1;
+    /* Occupy the full left side */
+    text-align: center;
+    padding: 20px;
+}
+
+#suit-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.coat-sizes {
+    flex: 1;
+    /* Occupy the full right side initially */
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow size boxes to wrap when screen size is reduced */
+    justify-content: space-between;
+}
+
+.coat-size-option {
+    flex-basis: calc(33.33% - 10px);
+    /* Initially, show three size boxes in a row */
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+.coat-size-option:hover {
+    background-color: #e0e0e0;
+}
+
+#select-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#select-button:hover {
+    background-color: #0056b3;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .coat-sizes {
+        flex-basis: 100%;
+        /* Make size boxes stack below the image in full width */
+        justify-content: flex-start;
+        /* Align size boxes to the left */
+    }
+
+    .coat-size-option {
+        flex-basis: 100%;
+        /* Size boxes take up full width */
+    }
+}
+
+.customize-suit-heading{
+    text-indent: 2rem;
+}

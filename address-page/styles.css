@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow flex items to wrap when screen size is reduced */
+}
+
+.payment-details {
+    flex: 1;
+    /* Occupy the full left side */
+    text-align: center;
+    padding: 20px;
+}
+
+.payment-details img {
+    max-width: 100%;
+    height: auto;
+}
+
+#address-form {
+    flex: 1;
+    /* Occupy the full right side initially */
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], textarea,
+ input[type="tel"],
+ input[type="email"]{
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#pay-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    min-width: 50%;
+    border-radius: .5rem;
+}
+
+#pay-button:hover {
+    background-color: #0056b3;
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+    .payment-details {
+        flex-basis: 100%;
+        /* Make payment details occupy full width */
+    }
+
+    #address-form {
+        flex-basis: 100%;
+        /* Make address form occupy full width */
+    }
+}
