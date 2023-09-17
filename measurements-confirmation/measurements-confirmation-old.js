@@ -79,16 +79,6 @@ document.getElementById("finalize-button").addEventListener("click", () => {
     "specialInstructions"
   ).value;
 
-  const spacingOptions = document.getElementsByName("spacing");
-  let selectedSpacing = "";
-
-  for (const option of spacingOptions) {
-    if (option.checked) {
-      selectedSpacing = option.value;
-      break; // Exit the loop once a selection is found
-    }
-  }
-
   // Retrieve selected measurements and suit from sessionStorage
   // const selectedMeasurements = JSON.parse(
   //   sessionStorage.getItem("selectedMeasurements")
@@ -106,7 +96,6 @@ document.getElementById("finalize-button").addEventListener("click", () => {
       neck,
       sleeve,
       height,
-      selectedSpacing,
       weight,
       specialInstructions,
     },

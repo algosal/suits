@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link href="./app.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://sandbox.web.squarecdn.com/v1/square.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script>
+        const appId = 'sandbox-sq0idb-U1YIgwud2Rk9guuOd9gilQ';
+        const locationId = 'L8C0CQVP7XWSA';
+
+        async function initializeCard(payments) {
+            const card = await payments.card();
+            await card.attach('#card-container');
+
+            return card;
+        }
+
+        async function createPayment(token, verificationToken) {
+            const body = JSON.stringify({
+                locationId,
+                sourceId: token,
+                verificationToken,
+                idempotencyKey: window.crypto.randomUUID(),
+            });
+
+            // const paymentResponse = await fetch('/payment', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body,
+            // });
+
+            // if (paymentResponse.ok) {
+            //     return paymentResponse.json();
+            // }
+
+            // const errorBody = await paymentResponse.text();
+            // throw new Error(errorBody);
+
+            return body;
+        }
+
+        async function tokenize(paymentMethod) {
+            const tokenResult = await paymentMethod.tokenize();
+            if (tokenResult.status === 'OK') {
+                return tokenResult.token;
+            } else {
+                let errorMessage = `Tokenization failed with status: ${tokenResult.status}`;
+                if (tokenResult.errors) {
+                    errorMessage += ` and errors: ${JSON.stringify(
+                        tokenResult.errors
+                    )}`;
+                }
+
+                throw new Error(errorMessage);
+            }
+        }
+
+        // Required in SCA Mandated Regions: Learn more at https://developer.squareup.com/docs/sca-overview
+        async function verifyBuyer(payments, token) {
+            let info = sessionStorage;
+
+            console.log(info)
+            let address = JSON.parse(info.getItem('address'));
+            const verificationDetails = {
+                amount: info.getItem('finalPrice'),
+                billingContact: {
+                    addressLines: [address.street],
+                    familyName: address.firstName,
+                    givenName: address.lastName,
+                    email: address.email,
+                    state: address.state,
+                    phone: address.phoneNumber,
+                    city: address.city,
+                    zip: address.zip,
+                },
+                currencyCode: 'USD',
+                intent: 'CHARGE',
+            };
+
+            const verificationResults = await payments.verifyBuyer(
+                token,
+                verificationDetails
+            );
+            return verificationResults.token;
+        }
+
+        // status is either SUCCESS or FAILURE;
+        function displayPaymentResults(status, token) {
+            console.log(status)
+            const statusContainer = document.getElementById(
+                'payment-status-container'
+            );
+            const goHome = document.getElementById(
+                'home'
+            );
+            if (status === 'SUCCESS') {
+                statusContainer.classList.remove('is-failure');
+                statusContainer.classList.add('is-success');
+                statusContainer.innerHtml = '<p>Your Payment is Successful.</p><p>Your confirmation is ' + token + '</p>';
+                goHome.classList.add('Go-Home-Paid');
+            } else {
+                statusContainer.classList.remove('is-success');
+                statusContainer.classList.add('is-failure');
+            }
+
+            statusContainer.style.visibility = 'visible';
+        }
+
+        document.addEventListener('DOMContentLoaded', async function () {
+            if (!window.Square) {
+                throw new Error('Square.js failed to load properly');
+            }
+
+            let payments;
+            try {
+                payments = window.Square.payments(appId, locationId);
+            } catch {
+                const statusContainer = document.getElementById(
+                    'payment-status-container'
+                );
+                statusContainer.className = 'missing-credentials';
+                statusContainer.style.visibility = 'visible';
+                return;
+            }
+
+            let card;
+            try {
+                card = await initializeCard(payments);
+            } catch (e) {
+                console.error('Initializing Card failed', e);
+                return;
+            }
+
+            async function handlePaymentMethodSubmission(event, card) {
+                event.preventDefault();
+                // alert(JSON.stringify(event));
+
+                try {
+                    // disable the submit button as we await tokenization and make a payment request.
+                    console.log("inside")
+                    cardButton.disabled = true;
+                    const token = await tokenize(card);
+                    const verificationToken = await verifyBuyer(payments, token);
+                    const paymentResults = await createPayment(
+                        token,
+                        verificationToken
+                    );
+                    displayPaymentResults('SUCCESS', token);
+                    // alert(JSON.stringify(verificationToken))
+                    // console.debug('Payment Token', token);
+                    chargeAndWriteToServers(paymentResults, token);
+                    console.log('Payment Success', paymentResults);
+                } catch (e) {
+                    cardButton.disabled = false;
+                    displayPaymentResults('FAILURE', null);
+                    console.error(e.message);
+                }
+            }
+
+            const cardButton = document.getElementById('card-button');
+            cardButton.addEventListener('click', async function (event) {
+                await handlePaymentMethodSubmission(event, card);
+
+            });
+        });
+
+
+        function chargeAndWriteToServers(paymentResults, token) {
+
+            const statusContainer = document.getElementById(
+                'payment-status-container'
+            );
+
+            const goHome = document.getElementById(
+                'home'
+            );
+            // console.log("will send to Server\n" +  JSON.parse(paymentResults).sourceId);
+            let globalId = JSON.parse(paymentResults).sourceId;
+
+            console.log({ ...sessionStorage, globalId });
+
+            let suits_cloud_url = 'https://cpnblyj5e6.execute-api.us-east-2.amazonaws.com/v1/payments';
+            axios.post(suits_cloud_url, { ...sessionStorage, globalId, paymentResults })
+                .then(
+                    d => {
+                        // alert(d.data.body);
+                        // sessionStorage.clear();
+                        statusContainer.innerText = 'Order Confirmed ' + token;
+                        goHome.classList.add('Go-Home-Paid');
+
+                    });
+
+            // statusContainer.innerHtml ='<p>Your Payment is Successful.</p><p>Your Order Confirmation is ' + token + '</p>';
+            statusContainer.innerText = 'Authorizing your Credit Card. Please wait!';
+            // console.log("We are in the Payment Processing");
+
+
+
+
+            // let my_apache_object = {
+
+            // "suitMeasure":{"chest\":\"42 - 44\",\"overArm\":\"50 - 52\",\"waist\":\"34 - 40\",\"hip\":\"40 - 45\",\"neck\":\"16 - 17.5\",\"sleeve\":\"33 - 34\",\"height\":\"5'8\\\" - 6'\",\"selectedSpacing\":\"none\",\"weight\":\"200 - 220\",\"specialInstructions\":\"none\",\"couponCode\":\"xyz01\"}",
+            //   "address": "{"firstName\":\"Salman\",\"lastName\":\"Saeed\",\"phoneNumber\":\"9148931822\",\"email\":\"salmanfinancials@gmail.com\",\"street\":\"245 Rumsey Rd Apt 1t\",\"city\":\"Yonkers\",\"state\":\"NY\",\"zip\":\"10701\",\"specialNote\":\"none\"}",
+            //   "email": "salmanfinancials@gmail.com",
+            //   "globalId":"conc:something-will-go-here-from-the-bank",
+            //   "selected_suit": "",
+            //   "cost":"200",
+            //   "tailor_master":"someone",
+            //   "apprentice":null,
+            //   "test_tailor":null,
+
+            // }
+
+
+            let my_apache_object_cleaned = {
+                "suitMeasure": JSON.parse(sessionStorage.getItem('finaSize')).suitMeasure,
+                "address": sessionStorage.getItem('address'),
+                "email": sessionStorage.getItem('email'),
+                "globalId": globalId,
+                "selected_suit": JSON.parse(sessionStorage.getItem('selectedSuit')).id,
+                "cost": JSON.parse(sessionStorage.getItem('selectedSuit')).Cost,
+                "tailor_master": JSON.parse(sessionStorage.getItem('selectedSuit')).Tailor_Master,
+                "apprentice": null,
+                "test_tailor": null,
+            }
+            let apache_url = "https://suitsdevital.com/automation/saveorder/index.php";
+            axios.post(apache_url, my_apache_object_cleaned)
+                .then(
+                    d => {
+                        // alert(d.data.body);
+                        // sessionStorage.clear();
+                        statusContainer.innerText = 'Tailor Found and Email Sent. Order Confirmed ' + token;
+                        goHome.classList.add('Go-Home-Paid');
+                    });
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <form id="payment-form">
+        <h1 class="finsln">Suits de Vital</h1>
+        <div id="card-container"></div>
+        <button id="card-button" type="button">Pay $0.00</button>
+    </form>
+    <a href="https://suitsdevital.com">
+        <div id="payment-status-container">
+            paid
+        </div>
+        <button id="home" class="Go-Home">Go Home</button>
+
+    </a>
+
+    <script>
+        document.getElementById('card-button').innerHTML = "Pay $" + parseFloat(sessionStorage.getItem('finalPrice')).toFixed(2);
+        //   document.getElementById('card-button').innerText = "hi"
+
+    </script>
+</body>
+
+</html>

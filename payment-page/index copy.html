@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <link href="./app.css" rel="stylesheet" />
+    <!-- <link href="/app.css" rel="stylesheet" /> -->
     <script type="text/javascript" src="https://sandbox.web.squarecdn.com/v1/square.js"></script>
     <script>
         const appId = 'sandbox-sq0idb-U1YIgwud2Rk9guuOd9gilQ';
@@ -23,22 +23,20 @@
                 idempotencyKey: window.crypto.randomUUID(),
             });
 
-            // const paymentResponse = await fetch('/payment', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body,
-            // });
+            const paymentResponse = await fetch('/payment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body,
+            });
 
-            // if (paymentResponse.ok) {
-            //     return paymentResponse.json();
-            // }
+            if (paymentResponse.ok) {
+                return paymentResponse.json();
+            }
 
-            // const errorBody = await paymentResponse.text();
-            // throw new Error(errorBody);
-
-            return body;
+            const errorBody = await paymentResponse.text();
+            throw new Error(errorBody);
         }
 
         async function tokenize(paymentMethod) {
@@ -71,7 +69,7 @@
                     region: 'LND',
                     city: 'London',
                 },
-                currencyCode: 'USD',
+                currencyCode: 'GBP',
                 intent: 'CHARGE',
             };
 
@@ -84,14 +82,12 @@
 
         // status is either SUCCESS or FAILURE;
         function displayPaymentResults(status) {
-            console.log(status)
             const statusContainer = document.getElementById(
                 'payment-status-container'
             );
             if (status === 'SUCCESS') {
                 statusContainer.classList.remove('is-failure');
                 statusContainer.classList.add('is-success');
-
             } else {
                 statusContainer.classList.remove('is-success');
                 statusContainer.classList.add('is-failure');
@@ -127,11 +123,9 @@
 
             async function handlePaymentMethodSubmission(event, card) {
                 event.preventDefault();
-                alert(JSON.stringify(event));
 
                 try {
                     // disable the submit button as we await tokenization and make a payment request.
-                    console.log("inside")
                     cardButton.disabled = true;
                     const token = await tokenize(card);
                     const verificationToken = await verifyBuyer(payments, token);
@@ -140,9 +134,8 @@
                         verificationToken
                     );
                     displayPaymentResults('SUCCESS');
-                        alert(JSON.stringify(verificationToken))
-                    console.debug('Payment Token', token);
-                    console.log('Payment Success', paymentResults);
+
+                    console.debug('Payment Success', paymentResults);
                 } catch (e) {
                     cardButton.disabled = false;
                     displayPaymentResults('FAILURE');
@@ -153,7 +146,6 @@
             const cardButton = document.getElementById('card-button');
             cardButton.addEventListener('click', async function (event) {
                 await handlePaymentMethodSubmission(event, card);
-
             });
         });
     </script>
@@ -161,7 +153,6 @@
 
 <body>
     <form id="payment-form">
-        <h1>Suits de Vital Payment</h1>
         <div id="card-container"></div>
         <button id="card-button" type="button">Pay $2.00</button>
     </form>

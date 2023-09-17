@@ -2,9 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Check if a coupon code exists in session storage
   const myTotalSessionStorage = sessionStorage;
   const selectedMeasurements = sessionStorage.getItem("selectedMeasurements");
-  console.log(selectedMeasurements);
-  console.log(JSON.parse(myTotalSessionStorage.finalObject).couponCode);
-  let couponCode = JSON.parse(myTotalSessionStorage.finalObject).couponCode;
+  // console.log(selectedMeasurements);
+  // console.log(JSON.parse(myTotalSessionStorage.couponCode));
+  let couponCode = JSON.parse(myTotalSessionStorage.couponCode);
   // Function to verify the coupon code
   function verifyCouponCode() {
     // couponCode = false;
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
         )
         .then(function (response) {
           if (response.data && response.data !== "Invalid coupon code.") {
-            console.log(response);
+            // console.log(response);
             // Coupon code is valid, update the final price
             myTotalSessionStorage.finalPrice = JSON.parse(
               myTotalSessionStorage.selectedSuit
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to display suit details
     function displaySuitDetails(suit) {
-      console.log(suit);
+      // console.log(suit);
       const suitDetails = `
                 <img src="${
                   "https://suitsdevital.com/suitsdevadmin/" +
@@ -132,16 +132,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Add address and price to the selectedMeasurements object
-        selectedMeasurements.address = addressData;
+        // selectedMeasurements.address = addressData;
 
         // Store the updated selectedMeasurements in sessionStorage
+        sessionStorage.setItem("address", JSON.stringify(addressData));
+        console.log(sessionStorage.selectedSuit);
         sessionStorage.setItem(
-          "selectedMeasurements",
-          JSON.stringify(selectedMeasurements)
+          "productUUID",
+          JSON.parse(sessionStorage.selectedSuit).PaymentUUID
         );
 
+        sessionStorage.setItem("email", document.getElementById("email").value);
+
+        // console.log(JSON.parse(sessionStorage));
+
         // Redirect to the payment page
-        window.location.href = "payment-confirmation.html";
+        // window.location.href = "payment-confirmation.html";
+        window.location.href = "/payments/";
       });
   }
 });

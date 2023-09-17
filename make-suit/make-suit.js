@@ -1,4 +1,4 @@
-import sizes from "./sizes.js"; // Import the sizes array
+import sizesR from "./sizes.js"; // Import the sizesR array
 
 $(document).ready(async function () {
   const urlParams = new URLSearchParams(window.location.search);
@@ -9,9 +9,9 @@ $(document).ready(async function () {
     // Your suit objects here
   ];
 
-  console.log(suitId);
+  // console.log(suitId);
   suits = await getOneSuit(suitId).then((suits) => {
-    console.log(suits);
+    // console.log(suits);
 
     // Function to display suit details and size options
     function displaySuitDetails(suit) {
@@ -23,14 +23,14 @@ $(document).ready(async function () {
       $(".suit-details").html(`<h2>${suit.Name}</h2>`);
 
       // Create size options
-      const sizeOptions = sizes.map((size) => {
+      const sizeOptions = sizesR.map((size) => {
         return `<div class="coat-size-option" data-size="${size.id}">${size.name}</div>`;
       });
 
       $(".coat-sizes").html(sizeOptions.join(""));
     }
 
-    console.log(suits);
+    // console.log(suits);
 
     // Find the suit based on suitId
     const selectedSuit = suits;
@@ -45,7 +45,7 @@ $(document).ready(async function () {
       // Event handler for selecting a size
       $(".coat-size-option").on("click", function () {
         const selectedSizeId = $(this).data("size");
-        const selectedSize = sizes.find((size) => size.id == selectedSizeId);
+        const selectedSize = sizesR.find((size) => size.id == selectedSizeId);
         const suitMeasurements = {
           suitId: suitId,
           "suit-measure": selectedSize,

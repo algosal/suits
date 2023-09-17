@@ -125,3 +125,18 @@ input[type="text"], textarea {
         /* Reset flex-basis to auto for vertical layout */
     }
 }
+
+
+
+/* Add this CSS to your styles.css file */
+/* Radio buttons displayed in a row */
+.form-group label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.form-group input[type="radio"] {
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}

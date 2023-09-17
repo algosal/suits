@@ -10,8 +10,7 @@
 
 <body>
     <div class="container">
- 
-            
+
         <!-- Measurement Form Section -->
         <form id="measurement-form">
             <!-- Measurement Input Fields -->
@@ -47,6 +46,21 @@
                 <label for="weight">Weight:</label>
                 <input type="text" id="weight" name="weight" required>
             </div>
+
+
+            <!-- Spacing Radio Button -->
+            <div class="form-group">
+                <label>Spacing:</label>
+                <input type="radio" id="spacingNone" name="spacing" value="none" required checked> 
+                <label for="spacingNone">None</label>
+                <input type="radio" id="spacing1Inch" name="spacing" value="1 inch">
+                <label for="spacing1Inch">1 inch</label>
+                <input type="radio" id="spacing1_5Inches" name="spacing" value="1.5 inches">
+                <label for="spacing1_5Inches">1.5 inches</label>
+                <input type="radio" id="spacingInstructions" name="spacing" value="In Special Instructions">
+                <label for="spacingInstructions">In Special Instructions</label>
+            </div>
+
             <div class="form-group">
                 <label for="couponCode">Coupon Code:</label>
                 <input type="text" id="couponCode" name="couponCode">
@@ -56,25 +70,25 @@
                 <textarea id="specialInstructions" name="specialInstructions" rows="4"></textarea>
             </div>
 
+
             <!-- Finalize Button -->
             <button type="button" id="finalize-button">Finalize</button>
         </form>
 
-
-            <!-- Suit Details Section -->
-            <div class="suit-info">
-                <div class="suit-details">
-                    <!-- Display selected suit details here -->
-                    <h2>Suit Name</h2>
-                    <p>Suit Price</p>
-                </div>
-            
-                <!-- Suit Image Section -->
-                <div class="suit-image">
-                    <!-- Display suit image here -->
-                    <img src="suit-image-src.jpg" alt="Suit Name">
-                </div>
+        <!-- Suit Details Section -->
+        <div class="suit-info">
+            <div class="suit-details">
+                <!-- Display selected suit details here -->
+                <h2>Suit Name</h2>
+                <p>Suit Price</p>
             </div>
+
+            <!-- Suit Image Section -->
+            <div class="suit-image">
+                <!-- Display suit image here -->
+                <img src="" alt="Suit Name">
+            </div>
+        </div>
     </div>
 
     <!-- JavaScript -->
