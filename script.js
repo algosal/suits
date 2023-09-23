@@ -15,6 +15,9 @@ $(document).ready(function () {
                 <button class="buy-button" data-suit-id="${
                   suit.id
                 }">Buy</button>
+                <button class="details-button" data-suit-id="${
+                  suit.id
+                }">Details</button>
             </div>
         `;
       $("#suit-container").append(suitCard);
@@ -26,6 +29,12 @@ $(document).ready(function () {
       window.location.href = `make-suit/index.html?id=${encodeURIComponent(
         suitId
       )}`;
+    });
+
+    // Add click event handler for Buy buttons
+    $(".details-button").on("click", function () {
+      const suitId = $(this).data("suit-id");
+      window.open(`suit-details/index.html?id=${encodeURIComponent(suitId)}`);
     });
   });
 });

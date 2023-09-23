@@ -23,8 +23,8 @@ function loadSuitAndMeasurements() {
     const suitDetailsHTML = `
       <h2>${selectedSuit.Name}</h2>
       <p>Price: ${parseFloat(selectedSuit.Price).toFixed(2)}</p>
+      <p>Suit ID: ${selectedMeasurements.suitId}</p>
     `;
-    // <p>Suit ID: ${selectedMeasurements.suitId}</p>
     suitDetailsElement.innerHTML = suitDetailsHTML;
 
     // Display the suit image
@@ -56,19 +56,7 @@ function loadSuitAndMeasurements() {
 
     // Set the coupon code
     document.getElementById("couponCode").value =
-      sessionStorage.getItem("couponCode") || "";
-
-    // Set the Suspender Buttons and Long Pockets fields
-    const suspenderButtons = document.getElementById("suspenderButtons");
-    const longPockets = document.getElementById("longPockets");
-
-    if (selectedSuitMeasurements.suspenderButtons) {
-      suspenderButtons.value = selectedSuitMeasurements.suspenderButtons;
-    }
-
-    if (selectedSuitMeasurements.longPockets) {
-      longPockets.value = selectedSuitMeasurements.longPockets;
-    }
+      selectedMeasurements.couponCode || "";
   } else {
     suitDetailsElement.innerHTML = "<p>No suit measurements selected.</p>";
     suitImageElement.innerHTML = ""; // Clear the suit image if no suit is selected
@@ -90,20 +78,11 @@ document.getElementById("finalize-button").addEventListener("click", () => {
   const specialInstructions = document.getElementById(
     "specialInstructions"
   ).value;
-  const suspenderButtons = document.getElementById("suspenderButtons").value;
-  const longPockets = document.getElementById("longPockets").value;
-
-  const spacingOptions = document.getElementsByName("spacing");
-  let selectedSpacing = "";
-
-  for (const option of spacingOptions) {
-    if (option.checked) {
-      selectedSpacing = option.value;
-      break; // Exit the loop once a selection is found
-    }
-  }
 
   // Retrieve selected measurements and suit from sessionStorage
+  // const selectedMeasurements = JSON.parse(
+  //   sessionStorage.getItem("selectedMeasurements")
+  // );
   const selectedSuit = JSON.parse(sessionStorage.getItem("selectedSuit"));
   // Create the object as specified
   const finalObject = {
@@ -117,11 +96,8 @@ document.getElementById("finalize-button").addEventListener("click", () => {
       neck,
       sleeve,
       height,
-      selectedSpacing,
       weight,
       specialInstructions,
-      suspenderButtons, // Add Suspender Buttons to the object
-      longPockets, // Add Long Pockets to the object
     },
     couponCode,
   };

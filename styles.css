@@ -6,34 +6,66 @@ body {
 body::-webkit-scrollbar{
     width: 0;
 }
+.brown{
+    color: brown;
+}
 .main-heading {
     width: 100%;
-    background-color: black;
+    background-color: brown;
     margin: 0;
     padding: 0;
-    height: 10rem;
+    height: 9rem;
 }
 
+/* Define the keyframes for the animation */
+@keyframes heading-enlight {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply the animation to the element */
 .main-heading-overflow {
     position: fixed;
     color: white;
     font-size: 7rem;
-    padding: 2rem;
+    padding: 1rem 2rem;
     font-family: cursive;
     background-color: black;
     margin: 0;
     width: 100%;
-    /* z-index: -1; */
+    opacity: 0.1;
+    /* Initial opacity */
+    animation: heading-enlight 2s forwards;
+    /* Animation name and duration */
 }
 
 button {
-    min-width: 10rem;
+    /* min-width: 10rem; */
     padding: .5rem;
     color: white;
     font-weight: bold;
     background-color: brown;
     border-radius: .4rem;
     border: 2px solid brown;
+}
+
+.buy-button {
+    min-width: auto;
+    padding: .5rem;
+    color: white;
+    font-weight: bold;
+    background-color: brown;
+    border-radius: .4rem;
+    border: 2px solid brown;
+}
+.details-button {
+    background-color: blue;
+    border: 2px solid blue;
 }
 
 .container {
@@ -48,19 +80,26 @@ button {
 }
 
 .suit-card {
-    width: 48%;
+    flex: 1 1 calc(35%);
+    /* width: 30%; */
     margin: 1%;
     padding: 20px;
     box-sizing: border-box;
     border: 1px solid #ccc;
     text-align: center;
+    height: 70vh;
 }
+
 
 .suit-image {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    /* height: auto; */
+    height: 70%;
+    max-height: 100%;
+    object-fit: contain;
+    /* background-color: blue; */
+    /* border: 5px solid blue; */
 }
-
 .suit-price {
     font-weight: bold;
     margin-top: 10px;
@@ -84,14 +123,18 @@ button {
     }
 
     .main-heading-overflow {
+        display: flex;
         position: fixed;
         color: white;
         font-size: 3.4rem;
-        padding: 1rem;
+        padding: 0rem;
+        padding-top: 1rem;
+        justify-content: center;
         font-family: cursive;
         background-color: black;
         margin: 0;
         width: 100%;
+        text-align: center;
     }
 
     .finsln {

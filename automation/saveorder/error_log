@@ -1,0 +1,149 @@
+[16-Sep-2023 20:30:06 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 3
+[16-Sep-2023 20:30:06 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 3
+[16-Sep-2023 20:30:06 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 3
+[16-Sep-2023 20:30:06 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 6
+[16-Sep-2023 20:48:29 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 3
+[16-Sep-2023 20:48:29 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 3
+[16-Sep-2023 20:48:29 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 3
+[16-Sep-2023 20:48:29 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 6
+[16-Sep-2023 20:50:16 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:50:16 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:50:16 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:50:16 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:50:16 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:50:16 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:50:16 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:50:16 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:50:34 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:50:34 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:50:34 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:50:34 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:50:34 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:50:34 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:50:34 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:50:34 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:52:30 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:52:30 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:52:30 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:52:30 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:52:30 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:52:30 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:52:30 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:52:30 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:52:33 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:52:33 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:52:33 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:52:33 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:52:33 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:52:33 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:52:33 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:52:33 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:53:02 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:02 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:02 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:02 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:53:02 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:02 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:02 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:02 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:53:22 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:22 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:22 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:22 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:53:23 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:23 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:23 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:23 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:53:32 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:32 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:32 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:32 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:53:32 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:32 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:32 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:32 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:53:34 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:34 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:34 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:34 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:53:35 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:35 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:35 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:53:35 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:54:50 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:54:50 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:54:50 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:54:50 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:54:50 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:54:50 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:54:50 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:54:50 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:54:50 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:54:50 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:54:50 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:54:50 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:57:00 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:57:00 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:57:00 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:57:00 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 20:57:54 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:57:54 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:57:54 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 13
+[16-Sep-2023 20:57:54 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 16
+[16-Sep-2023 21:06:01 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 7
+[16-Sep-2023 21:06:01 America/Chicago] PHP Warning:  include(db_connection.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 7
+[16-Sep-2023 21:06:01 America/Chicago] PHP Warning:  include(): Failed opening 'db_connection.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 7
+[16-Sep-2023 21:06:01 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 14
+[16-Sep-2023 21:09:15 America/Chicago] PHP Fatal error:  Uncaught Error: Cannot pass parameter 9 by reference in /home1/suitsdevital/public_html/automation/saveorder/index.php:54
+Stack trace:
+#0 {main}
+  thrown in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 54
+[16-Sep-2023 21:11:54 America/Chicago] PHP Warning:  include(db_conections.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 7
+[16-Sep-2023 21:11:54 America/Chicago] PHP Warning:  include(db_conections.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 7
+[16-Sep-2023 21:11:54 America/Chicago] PHP Warning:  include(): Failed opening 'db_conections.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 7
+[16-Sep-2023 21:11:54 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 10
+[16-Sep-2023 21:12:11 America/Chicago] PHP Fatal error:  Uncaught Error: Cannot pass parameter 9 by reference in /home1/suitsdevital/public_html/automation/saveorder/index.php:52
+Stack trace:
+#0 {main}
+  thrown in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 52
+[16-Sep-2023 21:16:22 America/Chicago] PHP Warning:  include(db_conections.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 7
+[16-Sep-2023 21:16:22 America/Chicago] PHP Warning:  include(db_conections.php): failed to open stream: No such file or directory in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 7
+[16-Sep-2023 21:16:22 America/Chicago] PHP Warning:  include(): Failed opening 'db_conections.php' for inclusion (include_path='.:/opt/cpanel/ea-php70/root/usr/share/pear') in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 7
+[16-Sep-2023 21:16:22 America/Chicago] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user ''@'localhost' (using password: NO) in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 10
+[16-Sep-2023 21:16:35 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home1/suitsdevital/public_html/automation/saveorder/index.php:66
+Stack trace:
+#0 {main}
+  thrown in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 66
+[16-Sep-2023 21:17:54 America/Chicago] PHP Warning:  Illegal string offset 'firstName' in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 41
+[16-Sep-2023 21:17:54 America/Chicago] PHP Fatal error:  Uncaught Error: Only variables can be passed by reference in /home1/suitsdevital/public_html/automation/saveorder/index.php:41
+Stack trace:
+#0 {main}
+  thrown in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 41
+[18-Sep-2023 20:11:49 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home1/suitsdevital/public_html/automation/saveorder/index.php:114
+Stack trace:
+#0 {main}
+  thrown in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 114
+[18-Sep-2023 20:16:14 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home1/suitsdevital/public_html/automation/saveorder/index.php:114
+Stack trace:
+#0 {main}
+  thrown in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 114
+[18-Sep-2023 20:18:31 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home1/suitsdevital/public_html/automation/saveorder/index.php:114
+Stack trace:
+#0 {main}
+  thrown in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 114
+[18-Sep-2023 20:19:10 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home1/suitsdevital/public_html/automation/saveorder/index.php:116
+Stack trace:
+#0 {main}
+  thrown in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 116
+[18-Sep-2023 20:19:39 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home1/suitsdevital/public_html/automation/saveorder/index.php:116
+Stack trace:
+#0 {main}
+  thrown in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 116
+[19-Sep-2023 07:17:14 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home1/suitsdevital/public_html/automation/saveorder/index.php:118
+Stack trace:
+#0 {main}
+  thrown in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 118
+[19-Sep-2023 07:27:20 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function bind_param() on boolean in /home1/suitsdevital/public_html/automation/saveorder/index.php:118
+Stack trace:
+#0 {main}
+  thrown in /home1/suitsdevital/public_html/automation/saveorder/index.php on line 118

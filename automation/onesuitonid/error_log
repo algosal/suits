@@ -1,0 +1,4 @@
+[10-Sep-2023 20:00:20 America/Chicago] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in /home1/suitsdevital/public_html/automation/onesuitonid/confirmcoupon.php:15
+Stack trace:
+#0 {main}
+  thrown in /home1/suitsdevital/public_html/automation/onesuitonid/confirmcoupon.php on line 15

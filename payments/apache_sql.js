@@ -10,6 +10,23 @@ let my_apache_object_cleaned = {
   apprentice: null,
   test_tailor: null,
 };
+
+
+
+             my_apache_object_cleaned = {
+                "suitMeasure": JSON.parse(sessionStorage.getItem('finaSize')).suitMeasure,
+                "coupon_code": JSON.parse(sessionStorage.getItem('finaSize')).couponCode,
+                "address": sessionStorage.getItem('address'),
+                "email": sessionStorage.getItem('email'),
+                "globalId": "globalId5",
+                "selected_suit": JSON.parse(sessionStorage.getItem('selectedSuit')).Id,
+                "cost": JSON.parse(sessionStorage.getItem('selectedSuit')).Cost,
+                "tailor_master": JSON.parse(sessionStorage.getItem('selectedSuit')).Tailor_Master,
+                "apprentice": null,
+                "test_tailor": null,
+                "final_price":JSON.parse(sessionStorage.getItem('finalPrice')),
+                "commission":  JSON.parse(sessionStorage.getItem('selectedSuit')).Commission,
+            }
 console.log(" I am in the script");
 let apache_url = "https://suitsdevital.com/automation/saveorder/index.php";
 console.log(

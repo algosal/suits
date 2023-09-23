@@ -1,0 +1,1 @@
+[10-Sep-2023 20:32:13 America/Chicago] PHP Parse error:  syntax error, unexpected '$result' (T_VARIABLE), expecting ',' or ';' in /home1/suitsdevital/public_html/automation/confirmcoupon/confirmcoupon.php on line 29

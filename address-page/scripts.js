@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(function (error) {
           console.error(error);
           alert("Failed to validate the coupon code. Please try again.");
+          sessionStorage.removeItem("couponCode");
         });
     } else {
       // No coupon code, use the original price

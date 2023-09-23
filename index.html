@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1 class="main-heading-overflow finsln">Suits de Vital</h1>
+    <h1 class="main-heading-overflow finsln">Suits <span class="brown">de</span> Vital</h1>
     <h1 class="main-heading"></h1>
     <div class="container">
         <div class="row" id="suit-container">
@@ -25,6 +25,17 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./utils/getAllSuits.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Get the coupon code from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const couponCode = urlParams.get("coupon");
+
+            if(couponCode!==null){
+                // Store the couponCode in sessionStorage
+                sessionStorage.setItem("couponCode", couponCode);
+            }
+
+    </script>
 </body>
 
 </html>
